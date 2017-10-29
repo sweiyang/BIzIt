@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="wy.bizproto.Cards">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:entries="@array/bank_arrays"
+        android:id="@+id/bank_spinner"
+        android:background="@color/mist"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true">
+
+    </Spinner>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/posb"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp" />
+
+    <EditText
+        android:id="@+id/cardnumber"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:hint="@string/card_number"
+        android:layout_marginStart="24dp"
+        android:layout_below="@+id/bank_spinner"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/ccv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/ccv"
+        android:layout_alignBaseline="@+id/cardnumber"
+        android:layout_alignBottom="@+id/cardnumber"
+        android:layout_toEndOf="@+id/cardnumber"
+        android:layout_marginStart="21dp" />
+
+    <EditText
+        android:id="@+id/nameoncard"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/name_on_card"
+        android:layout_below="@+id/cardnumber"
+        android:layout_alignStart="@+id/cardnumber" />
+
+    <EditText
+        android:id="@+id/expirydateyy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/year"
+        android:layout_alignBaseline="@+id/nameoncard"
+        android:layout_alignBottom="@+id/nameoncard"
+        android:layout_toEndOf="@+id/nameoncard" />
+
+    <EditText
+        android:id="@+id/expirydatemm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/month"
+        android:layout_alignBaseline="@+id/textView6"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  /  "
+        android:layout_alignBaseline="@+id/expirydateyy"
+        android:layout_alignBottom="@+id/expirydateyy"
+        android:layout_toEndOf="@+id/expirydateyy"
+        android:id="@+id/textView6" />
+
+    <Button
+        android:id="@+id/add_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Card"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/mist"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:onClick="addCard"/>
+
+</RelativeLayout>

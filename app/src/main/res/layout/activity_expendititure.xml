@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+    layout="@layout/toolbar"
+    android:id="@+id/toolbar"/>
+
+    <Button
+        android:id="@+id/rewards"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text="Budgeting"
+        android:layout_above="@+id/transactionhistory"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:textSize="25sp"
+        android:background="@color/mist"
+        android:textColor="@color/white"
+        android:onClick="gotoBudgeting"
+        />
+
+    <Button
+        android:id="@+id/transactionhistory"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text="Transaction History"
+        android:layout_centerVertical="true"
+        android:textSize="25sp"
+        android:background="@color/mist"
+        android:textColor="@color/white"
+        android:onClick="gotoTransactionHisotry"/>
+
+    <Button
+        android:id="@+id/summary"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text="Summary"
+        android:layout_below="@+id/transactionhistory"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:background="@color/mist"
+        android:textColor="@color/white"
+        android:onClick="gotoSummary"/>
+
+
+
+</RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/activity_home_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

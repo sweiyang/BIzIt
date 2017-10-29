@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/Home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/transfer"
+            android:title="Transfer/TopUp" />
+        <item
+            android:id="@+id/expenditure"
+            android:title="Expenditure" />
+        <item
+            android:id="@+id/cardservices"
+            android:title="Card Services" />
+        <item
+            android:id="@+id/invest"
+            android:title="Invest" />
+        <item
+            android:id="@+id/apply"
+            android:title="Apply" />
+        <item
+            android:id="@+id/help"
+            android:title="Help" />
+        <item
+            android:id="@+id/settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/logout"
+            android:title="Logout" />
+
+            />
+    </group>
+
+
+
+</menu>

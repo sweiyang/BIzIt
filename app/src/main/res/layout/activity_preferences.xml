@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+        />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preferences of Rewards"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true"
+            android:background="@color/mist"
+            android:textSize="25sp"
+            android:textColor="@color/white"/>
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/textView4"
+            android:entries="@array/preferences_arrays"
+            android:id="@+id/spinner1"
+            android:background="@color/mist"
+            android:textSize="25sp"
+            android:textColor="@color/white">
+
+        </Spinner>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/listof_pref"
+            android:layout_below="@+id/spinner1"
+            >
+
+        </ListView>
+
+        <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/updatepreference"
+        android:text="Add to preference"
+        android:background="@color/mist"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        />
+        <Button
+            android:id="@+id/updatepreference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:text="Update Preference"
+            android:background="@color/mist"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:onClick="updatepreference"
+            />
+
+
+
+
+    </RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/activity_home_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">BizProto</string>
+    <string name="EnterEmail">Enter your e-mail</string>
+    <string name="EnterPass">Key in your Password</string>
+    <string name="EnterUsername">Enter your username</string>
+    <string name="EnterPhoneNumber">Enter your phone number</string>
+    <string name="EnterName">Enter your name</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_expendititure">Expendititure</string>
+    <string name="title_activity_preferences">Preferences</string>
+    <string name="card_number">Enter your card number</string>
+    <string name="ccv">CCV</string>
+    <string name="name_on_card">Name on Card</string>
+    <string name="year">YY</string>
+    <string name="month">MM</string>
+    <string name="re_enter">Re-enter your Password</string>
+    <string name="choosecard">Choose a card</string>
+    <string name="rewards">Available Reward</string>
+    <string name="getExpBud">Enter your Expenditure Budget</string>
+    <string name="getIncome">Enter your estimated monthly net Income</string>
+
+
+    <string-array name="preferences_arrays">
+        <item>Rebates</item>
+        <item>Discounts</item>
+        <item>CashBacks</item>
+        <item>Loyalty Points</item>
+        <item>Freebies</item>
+    </string-array>
+
+    <string-array name="bank_arrays">
+
+        <item>POSB</item>
+        <item>OCBC</item>
+        <item>DBS</item>
+        <item>UOB</item>
+        <item>American Express</item>
+
+    </string-array>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_summary">summary</string>
+    <string name="title_activity_transfer">Transfer</string>
+    <string name="title_activity_transaction_history">TransactionHistory</string>
+
+
+</resources>

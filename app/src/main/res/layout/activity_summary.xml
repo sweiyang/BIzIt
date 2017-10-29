@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Expenditure Budget"
+            android:id="@+id/expbud"
+            android:textColor="@color/white"
+            android:background="@color/mist"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_marginTop="138dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/displayExpBudget"
+            android:textColor="@color/stone"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_below="@+id/expbud"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="18dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Expenditure"
+            android:id="@+id/curexp"
+            android:textColor="@color/white"
+            android:background="@color/mist"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_below="@+id/displayExpBudget"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/displayCurExp"
+            android:textColor="@color/stone"
+            android:gravity="center"
+            android:layout_below="@+id/curexp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monthly Income"
+            android:id="@+id/income"
+            android:textColor="@color/white"
+            android:background="@color/mist"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_below="@+id/displayCurExp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/displayIncome"
+            android:textColor="@color/stone"
+            android:gravity="center"
+            android:layout_below="@+id/income"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:textSize="25sp"/>
+
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/activity_home_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

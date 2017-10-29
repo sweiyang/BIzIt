@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/toolbar"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DEALS AROUND YOU"
+            android:textColor="@color/white"
+            android:background="@color/mist"
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/dealsaroundyou"
+            android:textSize="25sp"
+            android:gravity="center"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/listofpref"
+        android:textAlignment="center"
+        android:scrollbars="vertical"
+        android:foregroundGravity="center"
+        android:layout_below="@+id/dealsaroundyou"
+        android:layout_alignParentStart="true"
+        >
+
+
+    </ListView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NEW AVAILABLE PLANS"
+            android:layout_below ="@id/listofpref"
+            android:textColor="@color/white"
+            android:background="@color/mist"
+            android:textSize="25sp"
+            android:id="@+id/newavailableplans"
+            android:gravity="center"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/listofplans"
+            android:layout_below="@+id/newavailableplans"
+            android:layout_alignParentStart="true"></ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/result"/>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/buttonlogo"
+            android:onClick="gotoQRscanner"
+            android:background="@drawable/roundcorner"
+            android:layout_marginBottom="22dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/activity_home_drawer" />
+
+
+</android.support.v4.widget.DrawerLayout>

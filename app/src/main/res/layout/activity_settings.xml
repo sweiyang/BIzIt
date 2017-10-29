@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+        />
+
+    <Button
+        android:id="@+id/updatepref"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Update/Change Preference"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:background="@color/mist"
+        android:textColor="@color/white"
+        android:onClick="gotoPreference"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/changeprofile"
+        android:layout_below="@+id/updateCards"
+
+        android:textSize="20sp"
+        android:background="@color/mist"
+        android:textColor="@color/white"
+        android:text="Change Profile Settings"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/updatedPref"
+        android:layout_below="@+id/updatepref"
+        ></ListView>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/updateCards"
+        android:layout_below="@+id/addcard"></ListView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/addcard"
+        android:layout_below="@+id/updatedPref"
+        android:textSize="20sp"
+        android:background="@color/mist"
+        android:textColor="@color/white"
+        android:text="Add/Remove Card"
+        android:onClick="gotoCards"/>
+</RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/activity_home_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
